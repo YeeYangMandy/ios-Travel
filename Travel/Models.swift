@@ -21,8 +21,8 @@ struct PackingItem: Codable{
 }
 
 //行程
-struct TripEvent{
-    var time: String
+struct TripEvent {
+    var date: Date // 改用 Date 類型，方便排序和格式化
     var title: String
-    var location: String
+    var location: String // 存地址
 }
