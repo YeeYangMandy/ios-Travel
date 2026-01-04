@@ -10,7 +10,7 @@ import UIKit
 class CalculatorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var pickerView: UIPickerView
+    @IBOutlet weak var pickerView: UIPickerView!
     
     //Mark: Data 先用測試資料，之後接API
     let currencies = ["JPY（日幣）", "USD（美金）", "KRW（韓元）", "EUR（歐元）"]

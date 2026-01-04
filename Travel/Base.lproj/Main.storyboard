@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4qn-he-aJS">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,8 +42,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV8-xg-lr4">
-                                <rect key="frame" x="175" y="258" width="48" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV8-xg-lr4">
+                                <rect key="frame" x="16" y="258" width="361" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -57,16 +58,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="計算"/>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="ENn-8x-tuO" eventType="touchUpInside" id="BWG-El-irs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xjl-gh-dP7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="r8W-gH-gUi"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="f1z-vW-yb7" id="gGa-bz-TT9"/>
+                        <outlet property="pickerView" destination="zYJ-hE-j2s" id="PXe-CY-SGZ"/>
+                        <outlet property="resultLabel" destination="vV8-xg-lr4" id="RBe-t0-ot3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUt-1P-kru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402" y="-1083"/>
+            <point key="canvasLocation" x="400.76335877862596" y="-1083.0985915492959"/>
         </scene>
         <!--Itinerary View Controller-->
         <scene sceneID="65R-QS-tfH">
@@ -105,6 +114,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7HA-EM-otf" id="kwZ-DN-adz"/>
+                                    <outlet property="delegate" destination="7HA-EM-otf" id="h0m-WR-GGY"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="khE-VY-JYb"/>
@@ -117,8 +130,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CS3-nb-bQU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IoC-XI-2OC"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IoC-XI-2OC">
+                            <connections>
+                                <action selector="addEventTapped:" destination="7HA-EM-otf" id="h6z-9X-q0A"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="vRQ-3k-KoM" id="k6p-Rs-Kmj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6u-ss-4Z4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,9 +168,12 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="buttonTapped:" destination="9Fe-o9-HtH" eventType="touchUpInside" id="X29-fa-G3U"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01s-jG-Wqp">
-                                                    <rect key="frame" x="91" y="12" width="42" height="21"/>
+                                                    <rect key="frame" x="91" y="12" width="282" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -158,8 +181,16 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkButton" destination="bF8-Ij-8TZ" id="v4N-RS-olU"/>
+                                            <outlet property="titleLabel" destination="01s-jG-Wqp" id="93h-vZ-E3Z"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bMR-Mk-MH6" id="Ci6-b0-3zR"/>
+                                    <outlet property="delegate" destination="bMR-Mk-MH6" id="P9Z-3N-Fac"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fBj-3d-R9w"/>
@@ -172,8 +203,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NCz-Ev-Fvt">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zl9-TR-1so"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zl9-TR-1so">
+                            <connections>
+                                <action selector="addItemTapped:" destination="bMR-Mk-MH6" id="GHR-1T-HoA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2uU-Ud-YOK" id="yY2-Or-bkE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kD9-3T-WL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
