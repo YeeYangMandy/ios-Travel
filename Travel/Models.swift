@@ -15,9 +15,12 @@ struct CreditCard{
 }
 
 //打包清單
-struct PackingItem: Codable{
-    var title: String
+// 加上 Codable 才能存進 UserDefaults
+struct PackingItem: Codable {
+    var name: String
+    var isDone: Bool      // 這個屬性來記錄狀態
     var isChecked: Bool
+    var isDisabled: Bool  // 暫時關閉
 }
 
 //行程

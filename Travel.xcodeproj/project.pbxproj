@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177EAFE92F0AC65C00459425 /* PackingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EAFE82F0AC65C00459425 /* PackingListCell.swift */; };
+		177EAFEB2F0AC78700459425 /* PackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EAFEA2F0AC78700459425 /* PackingViewController.swift */; };
 		B82F58DE2EFD669200E11DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82F58DD2EFD669200E11DE5 /* AppDelegate.swift */; };
 		B82F58E02EFD669200E11DE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82F58DF2EFD669200E11DE5 /* SceneDelegate.swift */; };
 		B82F58E22EFD669200E11DE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82F58E12EFD669200E11DE5 /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		177EAFE82F0AC65C00459425 /* PackingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingListCell.swift; sourceTree = "<group>"; };
+		177EAFEA2F0AC78700459425 /* PackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackingViewController.swift; sourceTree = "<group>"; };
 		B82F58DA2EFD669200E11DE5 /* Travel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82F58DD2EFD669200E11DE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B82F58DF2EFD669200E11DE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,11 +123,13 @@
 				B82F58EB2EFD669600E11DE5 /* LaunchScreen.storyboard */,
 				B82F58EE2EFD669600E11DE5 /* Info.plist */,
 				B82F58E62EFD669200E11DE5 /* Travel.xcdatamodeld */,
+				177EAFE82F0AC65C00459425 /* PackingListCell.swift */,
 				B82F59102EFD68BB00E11DE5 /* CalculatorViewController.swift */,
 				B82F59122EFD68DA00E11DE5 /* ItineraryViewController.swift */,
 				B82F59142EFD68F300E11DE5 /* ChecklistViewController.swift */,
 				B82F59162EFD691600E11DE5 /* ChecklistCellTableViewCell.swift */,
 				B82F59182EFD698900E11DE5 /* Models.swift */,
+				177EAFEA2F0AC78700459425 /* PackingViewController.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -279,8 +285,10 @@
 				B82F59172EFD691600E11DE5 /* ChecklistCellTableViewCell.swift in Sources */,
 				B82F59132EFD68DA00E11DE5 /* ItineraryViewController.swift in Sources */,
 				B82F59152EFD68F300E11DE5 /* ChecklistViewController.swift in Sources */,
+				177EAFE92F0AC65C00459425 /* PackingListCell.swift in Sources */,
 				B82F59112EFD68BB00E11DE5 /* CalculatorViewController.swift in Sources */,
 				B82F58E22EFD669200E11DE5 /* ViewController.swift in Sources */,
+				177EAFEB2F0AC78700459425 /* PackingViewController.swift in Sources */,
 				B82F58E82EFD669200E11DE5 /* Travel.xcdatamodeld in Sources */,
 				B82F59192EFD698900E11DE5 /* Models.swift in Sources */,
 				B82F58DE2EFD669200E11DE5 /* AppDelegate.swift in Sources */,

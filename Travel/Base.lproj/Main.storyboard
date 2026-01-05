@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="1562.5954198473282" y="-159.1549295774648"/>
         </scene>
-        <!--Checklist View Controller-->
+        <!--Packing View Controller-->
         <scene sceneID="PxJ-Wx-878">
             <objects>
-                <viewController id="bMR-Mk-MH6" customClass="ChecklistViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bMR-Mk-MH6" customClass="PackingViewController" customModule="Travel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lul-bt-YLa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +191,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChecklistCell" id="9Fe-o9-HtH" customClass="ChecklistCell" customModule="Travel" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PackingCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PackingCell" id="9Fe-o9-HtH" customClass="PackingListCell" customModule="Travel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Fe-o9-HtH" id="ru1-Me-h8Y">
@@ -204,7 +204,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
                                                     <connections>
-                                                        <action selector="buttonTapped:" destination="9Fe-o9-HtH" eventType="touchUpInside" id="X29-fa-G3U"/>
+                                                        <action selector="checkButtonTapped:" destination="9Fe-o9-HtH" eventType="touchUpInside" id="GnR-C5-qHo"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01s-jG-Wqp">
@@ -217,8 +217,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="checkButton" destination="bF8-Ij-8TZ" id="v4N-RS-olU"/>
-                                            <outlet property="titleLabel" destination="01s-jG-Wqp" id="93h-vZ-E3Z"/>
+                                            <outlet property="checkButton" destination="bF8-Ij-8TZ" id="9Gu-BM-iIB"/>
+                                            <outlet property="nameLabel" destination="01s-jG-Wqp" id="ddL-Vh-uob"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -245,7 +245,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="2uU-Ud-YOK" id="yY2-Or-bkE"/>
+                        <outlet property="tableView" destination="2uU-Ud-YOK" id="5R8-cj-QNI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kD9-3T-WL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
